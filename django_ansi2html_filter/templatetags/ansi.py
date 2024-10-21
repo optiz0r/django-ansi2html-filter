@@ -14,4 +14,4 @@ def ansi(value):
 
 @register.simple_tag(name='ansi2html_styles')
 def ansi_styles(scheme='solarized', dark_bg=True):
-    return "\n".join(map(str, get_styles(dark_bg, scheme)[1:]))
+    return "\n".join(map(str, get_styles(dark_bg=dark_bg, line_wrap=True, scheme=scheme)[1:]))
